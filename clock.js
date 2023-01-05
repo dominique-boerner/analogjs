@@ -18,7 +18,6 @@ class AnalogJS {
 
   constructor(config) {
     this.config = { ...this.config, ...config };
-    console.log(this.config);
     this.canvas = document.querySelector(this.config.selector);
 
     if (this.canvas) {
