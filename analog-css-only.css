@@ -1,13 +1,22 @@
+/**
+ * Configuration of the clock
+ */
 :root {
   --clock-width: 300px;
   --clock-inner-circle: 30px;
+
   --clock-color: #333;
+  --clock-shadow-color: #33333370;
+
   --clock-hour-thickness: 8px;
   --clock-minute-thickness: 6px;
   --clock-second-thickness: 2px;
+
   --clock-hour-height: 60px;
   --clock-minute-height: 100px;
   --clock-second-height: 100px;
+
+  --clock-hand-radius: 3px;
 
   /** 
    * You can change this values via JavaScript to update the clock, 
@@ -39,7 +48,7 @@
   height: var(--clock-inner-circle);
   border-radius: 50%;
   background: var(--clock-color);
-  box-shadow: -2px -2px 6px #33333370;
+  box-shadow: -2px -2px 6px var(--clock-shadow-color);
   transform: translateX(calc(var(--clock-width) / 2 - calc(var(--clock-inner-circle) / 2))) 
              translateY(calc(var(--clock-width) / 2 - calc(var(--clock-inner-circle) / 2)));
 }
@@ -49,11 +58,9 @@
   position: absolute;
   height: var(--clock-second-height);
   width: var(--clock-second-thickness);
-  border-radius: 40px;
-  top: 0;
-  left: 0;
+  border-radius: var(--clock-hand-radius);
   background: var(--clock-color);
-  box-shadow: -2px -2px 6px #33333370;
+  box-shadow: -2px -2px 6px var(--clock-shadow-color);
   transform-origin: bottom center;
   transform: translateX(calc(var(--clock-width) / 2 - (var(--clock-second-thickness) / 2)))
              translateY(calc((var(--clock-width) / 2) - var(--clock-second-height))) 
@@ -65,11 +72,9 @@
   position: absolute;
   height: var(--clock-minute-height);
   width: var(--clock-minute-thickness);
-  border-radius: 40px;
-  top: 0;
-  left: 0;
+  border-radius: var(--clock-hand-radius);
   background: var(--clock-color);
-  box-shadow: -2px -2px 6px #33333370;
+  box-shadow: -2px -2px 6px var(--clock-shadow-color);
   transform-origin: bottom center;
   transform: translateX(calc(var(--clock-width) / 2 - (var(--clock-minute-thickness) / 2)))
              translateY(calc((var(--clock-width) / 2) - var(--clock-minute-height))) 
@@ -81,11 +86,9 @@
   position: absolute;
   height: var(--clock-hour-height);
   width: var(--clock-hour-thickness);
-  border-radius: 40px;
-  top: 0;
-  left: 0;
+  border-radius: var(--clock-hand-radius);
   background: var(--clock-color);
-  box-shadow: -2px -2px 6px #33333370;
+  box-shadow: -2px -2px 6px var(--clock-shadow-color);
   transform-origin: bottom center;
   transform: translateX(calc(var(--clock-width) / 2 - (var(--clock-hour-thickness) / 2)))
              translateY(calc((var(--clock-width) / 2) - var(--clock-hour-height))) 
