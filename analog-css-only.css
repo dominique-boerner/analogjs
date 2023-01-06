@@ -2,16 +2,19 @@
   --clock-width: 300px;
   --clock-inner-circle: 30px;
   --clock-color: #333;
-  --clock-hour-thickness: 10px;
+  --clock-hour-thickness: 8px;
   --clock-minute-thickness: 6px;
   --clock-second-thickness: 2px;
-  --minute: 59;
-  --second: 60;
-  --hour: 21;
+  --clock-hour-height: 60px;
+  --clock-minute-height: 100px;
+  --clock-second-height: 100px;
+  --minute: 35;
+  --second: 15;
+  --hour: 6;
 }
 
+/** clock outer ring **/
 .clock {
-
   position: relative;
   width: var(--clock-width);
   aspect-ratio: 1;
@@ -23,6 +26,7 @@
     2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
+/** clock center **/
 .clock::after {
   position: absolute;
   content: "";
@@ -35,47 +39,50 @@
              translateY(calc(var(--clock-width) / 2 - calc(var(--clock-inner-circle) / 2)));
 }
 
+/** clock second **/
 .clock .seconds {
   position: absolute;
-  height: calc(100% / 3);
+  height: var(--clock-second-height);
   width: var(--clock-second-thickness);
   border-radius: 40px;
   top: 0;
   left: 0;
   background: var(--clock-color);
   box-shadow: -2px -2px 6px #33333370;
-  transform-origin: top left;
-  transform: translateX(calc(var(--clock-width) / 2))
-             translateY(calc(var(--clock-width) / 2))
+  transform-origin: bottom center;
+  transform: translateX(calc(var(--clock-width) / 2 - (var(--clock-second-thickness) / 2)))
+             translateY(calc((var(--clock-width) / 2) - var(--clock-second-height))) 
              rotate(calc((360deg / 60) * var(--second)));
 }
 
+/** clock minute **/
 .clock .minutes {
   position: absolute;
-  height: var(--clock-minute-thickness);
-  width: calc(100% / 3);
+  height: var(--clock-minute-height);
+  width: var(--clock-minute-thickness);
   border-radius: 40px;
   top: 0;
   left: 0;
   background: var(--clock-color);
   box-shadow: -2px -2px 6px #33333370;
-  transform-origin: top left;
-  transform: translateX(calc(var(--clock-width) / 2)) 
-             translateY(calc(var(--clock-width) / 2)) 
+  transform-origin: bottom center;
+  transform: translateX(calc(var(--clock-width) / 2 - (var(--clock-minute-thickness) / 2)))
+             translateY(calc((var(--clock-width) / 2) - var(--clock-minute-height))) 
              rotate(calc((360deg / 60) * var(--minute)));
 }
 
+/** clock hour **/
 .clock .hour {
   position: absolute;
-  height: var(--clock-hour-thickness);
-  width: calc(100% / 3);
+  height: var(--clock-hour-height);
+  width: var(--clock-hour-thickness);
   border-radius: 40px;
   top: 0;
   left: 0;
   background: var(--clock-color);
   box-shadow: -2px -2px 6px #33333370;
-  transform-origin: top left;
-  transform: translateX(calc(var(--clock-width) / 2)) 
-             translateY(calc(var(--clock-width) / 2 - var(--clock-hour-thickness) / 2))
-             rotate(calc((360deg / 60) * var(--hour)));
+  transform-origin: bottom center;
+  transform: translateX(calc(var(--clock-width) / 2 - (var(--clock-hour-thickness) / 2)))
+             translateY(calc((var(--clock-width) / 2) - var(--clock-hour-height))) 
+             rotate(calc((360deg / 12) * var(--hour)));
 }
