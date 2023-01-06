@@ -8,9 +8,14 @@
   --clock-hour-height: 60px;
   --clock-minute-height: 100px;
   --clock-second-height: 100px;
-  --minute: 35;
-  --second: 15;
-  --hour: 6;
+
+  /** 
+   * You can change this values via JavaScript to update the clock, 
+   * @see css-clock.js 
+  **/
+  --minute: 0;
+  --second: 0;
+  --hour: 0;
 }
 
 /** clock outer ring **/
