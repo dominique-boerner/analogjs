@@ -5,8 +5,8 @@
   --clock-width: 300px;
   --clock-inner-circle: 30px;
 
-  --clock-color: rgb(180, 35, 107);
-  --clock-shadow-color: #a7018370;
+  --clock-color: #333;
+  --clock-shadow-color: #33333370;
 
   --clock-hour-thickness: 8px;
   --clock-minute-thickness: 6px;
