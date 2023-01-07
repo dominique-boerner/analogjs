@@ -1,0 +1,53 @@
+/** clock second **/
+.clock-default-seconds {
+  position: absolute;
+  height: var(--default-clock-second-height);
+  width: var(--default-clock-second-thickness);
+  border-radius: var(--default-clock-hand-radius);
+  background: var(--default-clock-color);
+  box-shadow: -2px -2px 6px var(--default-clock-shadow-color);
+  transform-origin: bottom center;
+  transform: translateX(
+      calc(var(--clock-width) / 2 - (var(--default-clock-second-thickness) / 2))
+    )
+    translateY(
+      calc((var(--clock-width) / 2) - var(--default-clock-second-height))
+    )
+    rotate(calc((360deg / 60) * var(--second)));
+}
+
+/** clock minute **/
+.clock-default-minutes {
+  position: absolute;
+  height: var(--default-clock-minute-height);
+  width: var(--default-clock-minute-thickness);
+  border-radius: var(--default-clock-hand-radius);
+  background: var(--default-clock-color);
+  box-shadow: -2px -2px 6px var(--default-clock-shadow-color);
+  transform-origin: bottom center;
+  transform: translateX(
+      calc(var(--clock-width) / 2 - (var(--default-clock-minute-thickness) / 2))
+    )
+    translateY(
+      calc((var(--clock-width) / 2) - var(--default-clock-minute-height))
+    )
+    rotate(calc((360deg / 60) * var(--minute)));
+}
+
+/** clock hour **/
+.clock-default-hours {
+  position: absolute;
+  height: var(--default-clock-hour-height);
+  width: var(--default-clock-hour-thickness);
+  border-radius: var(--default-clock-hand-radius);
+  background: var(--default-clock-color);
+  box-shadow: -2px -2px 6px var(--default-clock-shadow-color);
+  transform-origin: bottom center;
+  transform: translateX(
+      calc(var(--clock-width) / 2 - (var(--default-clock-hour-thickness) / 2))
+    )
+    translateY(
+      calc((var(--clock-width) / 2) - var(--default-clock-hour-height))
+    )
+    rotate(calc((360deg / 12) * var(--hour)));
+}

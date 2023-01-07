@@ -1,0 +1,9 @@
+/** make the clock square **/
+.clock-square {
+    border-radius: 0;
+}
+
+/** make the clock rounded **/
+.clock-rounded {
+    border-radius: 50%;
+}

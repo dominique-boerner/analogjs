@@ -1,0 +1,20 @@
+@import url("./themes/_themes.css");
+@import url("./variants/_variants.css");
+
+:root {
+  /* the width of the clock */
+  --clock-width: 300px;
+  /*
+    You can change this values via JavaScript to update the clock,
+    @see css-clock.js
+  */
+  --minute: 0;
+  --second: 0;
+  --hour: 0;
+}
+
+.clock {
+  position: relative;
+  width: var(--clock-width);
+  aspect-ratio: 1;
+}

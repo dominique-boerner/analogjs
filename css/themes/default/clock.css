@@ -1,0 +1,25 @@
+/** clock outer ring **/
+.clock {
+  border: 5px solid var(--default-clock-color);
+  box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(62, 62, 62, 0.5),
+    inset -2px -2px 4px rgba(45, 36, 36, 0.5),
+    2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+/** clock center **/
+.clock::after {
+  position: absolute;
+  content: "";
+  width: var(--default-clock-inner-circle);
+  height: var(--default-clock-inner-circle);
+  border-radius: 50%;
+  background: var(--default-clock-color);
+  box-shadow: -2px -2px 6px var(--default-clock-shadow-color);
+  transform: translateX(
+      calc(var(--clock-width) / 2 - calc(var(--default-clock-inner-circle) / 2))
+    )
+    translateY(
+      calc(var(--clock-width) / 2 - calc(var(--default-clock-inner-circle) / 2))
+    );
+}

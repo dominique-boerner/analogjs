@@ -1,18 +1,30 @@
 <html>
-    <head>
-        <script defer src="./clock.js"></script>
-        <script defer src="./css-clock.js"></script>
-        <script defer src="./index.js"></script>
-        <link rel="stylesheet" href="analog-css-only.css">
-    </head>
-    <body>
-        <h1>AnalogJS Clock</h1>
-        <canvas id="analogjs" height="400" width="400"></canvas>
-        <h2>CSS only</h2>
-        <div class="clock">
-            <div class="seconds"></div>
-            <div class="minutes"></div>
-            <div class="hour"></div>
-        </div>
-    </body>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- import js and css from analogjs -->
+    <script defer src="./analogjs.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>AnalogJS Clock</h1>
+    <h2>Default Square</h2>
+    <div class="clock clock-square">
+      <div class="clock-default-seconds"></div>
+      <div class="clock-default-minutes"></div>
+      <div class="clock-default-hours"></div>
+    </div>
+    <h2>Minimal Rounded</h2>
+    <div class="clock clock-rounded clock-minimal">
+      <div class="clock-minimal-seconds"></div>
+      <div class="clock-minimal-minutes"></div>
+      <div class="clock-minimal-hours"></div>
+    </div>
+    <h2>Merge different styles</h2>
+    <div class="clock clock-rounded clock-minimal">
+      <div class="clock-minimal-seconds"></div>
+      <div class="clock-default-minutes"></div>
+      <div class="clock-minimal-hours"></div>
+    </div>
+  </body>
 </html>

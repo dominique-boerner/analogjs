@@ -1,0 +1,20 @@
+@import url("clock.css");
+@import url("hands.css");
+
+:root {
+    --default-clock-color: #000;
+    --default-clock-inner-circle: 30px;
+
+    --default-clock-shadow-color: #00000070;
+
+    --default-clock-hour-thickness: 8px;
+    --default-clock-minute-thickness: 6px;
+    --default-clock-second-thickness: 2px;
+
+    --default-clock-hour-height: 60px;
+    --default-clock-minute-height: 100px;
+    --default-clock-second-height: 100px;
+
+    --default-clock-hand-radius: 3px;
+}
+
