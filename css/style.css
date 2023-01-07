@@ -1,5 +1,5 @@
-@import url("./themes/_themes.css");
-@import url("./variants/_variants.css");
+@import url("./themes/themes.css");
+@import url("./variants/variants.css");
 
 :root {
   /* the width of the clock */
