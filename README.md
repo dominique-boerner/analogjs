@@ -21,7 +21,7 @@ Example: https://dominique-boerner.github.io/analogjs/
 
 ## Create a new Theme
 
-To create a new theme, it is best to make a copy of the folder "css/themes/default/".
+To create a new theme, it is best to make a copy of the folder "css/themes/default/". After you finished, make sure to import your new theme in "css/themes/themes.css".
 
 A theme is made up of three different files:
 
