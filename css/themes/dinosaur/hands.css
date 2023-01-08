@@ -1,0 +1,53 @@
+/** clock second **/
+.clock-dinosaur-seconds {
+  position: absolute;
+  height: var(--dinosaur-clock-second-height);
+  width: var(--dinosaur-clock-second-thickness);
+  border-radius: var(--dinosaur-clock-hand-radius);
+  background: url("https://www.how-to-draw-funny-cartoons.com/images/dinosaur-drawings-003.jpg");
+  background-size: cover;
+  transform-origin: bottom center;
+  transform: translateX(
+      calc(var(--clock-width) / 2 - (var(--dinosaur-clock-second-thickness) / 2))
+    )
+    translateY(
+      calc((var(--clock-width) / 2) - var(--dinosaur-clock-second-height))
+    )
+    rotate(calc((360deg / 60) * var(--second)));
+}
+
+/** clock minute **/
+.clock-dinosaur-minutes {
+  position: absolute;
+  height: var(--dinosaur-clock-minute-height);
+  width: var(--dinosaur-clock-minute-thickness);
+  border-radius: var(--dinosaur-clock-hand-radius);
+  background: url("minute.png") no-repeat;
+  background-size: contain;
+  transform-origin: bottom center;
+  transform: translateX(
+      calc(var(--clock-width) / 2 - (var(--dinosaur-clock-minute-thickness) / 2))
+    )
+    translateY(
+      calc((var(--clock-width) / 2) - var(--dinosaur-clock-minute-height))
+    )
+    rotate(calc((360deg / 60) * var(--minute)));
+}
+
+/** clock hour **/
+.clock-dinosaur-hours {
+  position: absolute;
+  height: var(--dinosaur-clock-hour-height);
+  width: var(--dinosaur-clock-hour-thickness);
+  border-radius: var(--dinosaur-clock-hand-radius);
+  background: var(--dinosaur-clock-color);
+  box-shadow: -2px -2px 6px var(--dinosaur-clock-shadow-color);
+  transform-origin: bottom center;
+  transform: translateX(
+      calc(var(--clock-width) / 2 - (var(--dinosaur-clock-hour-thickness) / 2))
+    )
+    translateY(
+      calc((var(--clock-width) / 2) - var(--dinosaur-clock-hour-height))
+    )
+    rotate(calc((360deg / 12) * var(--hour)));
+}

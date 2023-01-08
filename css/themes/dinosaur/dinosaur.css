@@ -1,0 +1,20 @@
+@import url("clock.css");
+@import url("hands.css");
+
+:root {
+    --dinosaur-clock-color: #88C124;
+    --dinosaur-clock-inner-circle: 30px;
+
+    --dinosaur-clock-shadow-color: #00000070;
+
+    --dinosaur-clock-hour-thickness: 8px;
+    --dinosaur-clock-minute-thickness: 80px;
+    --dinosaur-clock-second-thickness: 80px;
+
+    --dinosaur-clock-hour-height: 60px;
+    --dinosaur-clock-minute-height: 100px;
+    --dinosaur-clock-second-height: 100px;
+
+    --dinosaur-clock-hand-radius: 3px;
+}
+
